@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head><meta name="referrer" content="no-referrer">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ODT를 한글 파일로 변환 | ODT → HWP·HWPX – 한글가볍게</title>
+  <meta name="description" content="ODT 파일을 한글에서 편집할 수 있는 HWP 또는 HWPX로 변환하세요. 문단·병합 표·내장 그림을 옮기며, 30MB까지 파일 업로드 없이 내 브라우저에서 처리합니다.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="theme-color" content="#2454d6"><meta property="og:title" content="ODT 파일을 한글로 변환 | 한글가볍게">
+  <meta property="og:description" content="ODT → HWP·HWPX. 문서를 업로드하지 않고 내 브라우저에서 변환하세요.">
+  <link rel="preload" href="/hwpzip-web/assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin><link rel="icon" href="/hwpzip-web/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/hwpzip-web/style.css">
+  <script src="/hwpzip-web/odt.js?v=ca384f8799d4" defer></script>
+<link rel="canonical" href="https://hwpzip.com/odt-to-hangul/"><meta property="og:url" content="https://hwpzip.com/odt-to-hangul/">
+<meta name="robots" content="noindex,nofollow"></head>
+<body>
+<a class="skip" href="#convert">본문으로 건너뛰기</a><header class="header shell"><a class="brand" href="/hwpzip-web/" aria-label="한글가볍게 홈"><img src="/hwpzip-web/favicon.svg" width="34" height="34" alt=""><span>한글<span class="brand-light">가볍게</span></span><small>BETA</small></a><nav aria-label="문서 도구"><a href="/hwpzip-web/" >한글 압축</a><a href="/hwpzip-web/odt-to-hangul/" aria-current="page">ODT → 한글</a></nav></header>
+<main><section class="hero shell" id="convert" aria-labelledby="headline">
+<p class="eyebrow">ODT → HWP 또는 HWPX</p><h1 id="headline">ODT 파일을 한글로 변환</h1>
+<p class="intro">제출처가 요구하는 HWP 또는 HWPX를 고르세요.<br class="mobile"> ODT의 문단과 표, 그림을 새 한글 파일로 옮깁니다.</p>
+<section class="document-privacy" aria-labelledby="privacy-title">
+        <div class="privacy-heading">
+          <span class="privacy-shield" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 8 3v5c0 5-8 10-8 10S4 16 4 11V6l8-3Zm-4 9 3 3 5-6"/></svg></span>
+          <div><p class="privacy-kicker">문서 보호 원칙</p><h2 id="privacy-title">파일을 서버에 업로드하지 않습니다.</h2></div>
+          <div class="privacy-assurance"><strong>공문서도 안심하고 사용하세요!</strong><a class="privacy-details" href="/hwpzip-web/file-handling.html" title="파일 처리 방식 자세히" aria-label="파일 처리 방식 자세히"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><circle class="info-dot" cx="12" cy="7.5" r=".8"/></svg></a></div>
+        </div>
+        <p class="privacy-caption" id="upload-privacy">내 브라우저에서 변환하고, 결과는 새 파일로 저장합니다.</p>
+      </section>
+<div class="workspace">
+<section class="upload-pane" aria-label="ODT 파일 변환">
+<div id="dropzone" class="dropzone"><div class="file-art" aria-hidden="true"><span class="document-mark"><span>ODT</span></span></div><h2>ODT 파일을 끌어 놓으세요</h2><label class="button choose" for="file-input">ODT 파일 선택</label><input id="file-input" class="visually-hidden" type="file" accept=".odt,application/vnd.oasis.opendocument.text" aria-describedby="format-note upload-privacy"><p id="format-note" class="format-note">ODT 파일 1개, 최대 30 MB</p></div>
+<div id="selected" class="selected" hidden><span class="file-badge">문</span><div class="file-detail"><strong id="filename"></strong><span id="filesize"></span></div><button id="remove" class="icon-button" aria-label="선택한 파일 제거">×</button></div>
+<div id="progress" class="progress-area" hidden role="status" aria-live="polite"><div class="progress-heading"><span id="stage-title"></span><span id="stage-value"></span></div><div class="progress-track"><div id="progress-bar"></div></div><p id="stage-detail"></p><button id="cancel" class="text-button">작업 취소</button></div>
+<div id="result" class="result" hidden aria-live="polite"><div class="complete-check" aria-hidden="true">✓</div><h2 id="result-title"></h2><strong id="result-size" class="converted-size"></strong><p id="result-summary"></p><div id="warning-box" class="conversion-warnings" hidden><strong>달라진 부분을 확인해 주세요</strong><ul id="result-warnings"></ul></div><p class="result-note">저장한 파일을 한글에서 열어 줄바꿈과 표, 그림의 위치를 확인해 주세요.</p><button id="download" class="button">변환 파일 다운로드 ↓</button><p id="processing-time" class="result-note"></p><button id="another" class="text-button">다른 파일 변환하기</button></div>
+<p id="error" class="error" hidden role="alert"></p>
+</section>
+<aside class="options" aria-label="변환 설정"><div class="options-heading"><h2>저장할 형식</h2></div>
+<fieldset id="format-options"><legend class="visually-hidden">변환할 한글 파일 형식</legend><label class="option"><input type="radio" name="format" value="hwpx" checked><span class="option-copy"><strong>HWPX <small>추천</small></strong><span>제출 형식이 자유로울 때 선택하세요.</span></span></label><label class="option"><input type="radio" name="format" value="hwp"><span class="option-copy"><strong>HWP</strong><span>제출처가 .hwp 파일을 요구할 때 선택하세요.</span></span></label></fieldset>
+<p class="conversion-note">문단과 병합 표, PNG나 JPEG 그림을 옮깁니다. 글꼴과 줄바꿈, 쪽 배치는 원본과 달라질 수 있어요.</p><a class="support-link" href="#supported">지원 범위 확인하기 ↗</a><button id="convert-button" class="button compress-button" disabled>한글 파일로 변환 <span aria-hidden="true">→</span></button></aside>
+</div>
+</section>
+<section class="how shell" aria-labelledby="how-title"><div><p class="section-kicker">사용 방법</p><h2 id="how-title">선택하고, 변환하고,<br>저장하세요.</h2></div><ol><li><span>01</span><h3>ODT 선택</h3><p>변환할 문서를 선택하세요.<br>파일은 내 기기에 머물러요.</p></li><li><span>02</span><h3>형식 선택</h3><p>HWPX 또는 HWP를 고르고<br>변환 버튼을 누르세요.</p></li><li><span>03</span><h3>다운로드</h3><p>변경 안내를 확인하고 저장한 뒤<br>한글에서 결과를 확인하세요.</p></li></ol></section>
+<section id="supported" class="faq shell" aria-labelledby="support-title"><div><p class="section-kicker">변환 전에</p><h2 id="support-title">지원 범위를 확인하세요</h2></div><div class="questions"><details open><summary>어떤 내용이 옮겨지나요?</summary><p>문단의 내어쓰기와 줄 간격, 맞춤 탭을 옮깁니다. 한글과 영문 글꼴, 글자 크기와 색상, 굵게, 기울임, 자간, 장평도 지원합니다. 병합 표와 중첩 표의 열 너비, 셀 여백, 배경색, 테두리를 옮깁니다. PNG와 JPEG 그림을 지원하며, 표 하나를 감싼 투명한 텍스트 상자도 처리합니다. 그림 바이트는 보존하고 HWP 저장 뒤에는 글자와 문단, 표의 주요 서식도 다시 검사합니다. 원본과 같은 쪽 배치를 보장하지는 않습니다.</p></details><details><summary>원본과 달라질 수 있는 부분은요?</summary><p>글꼴 설치 여부에 따라 줄바꿈과 쪽 수가 달라질 수 있습니다. 지원하는 표와 그림의 위치 기준과 여백을 옮기지만 문서 엔진의 배치 방식에 따라 위치가 달라질 수 있습니다. 목록 번호, 하이퍼링크, 자동 날짜와 쪽 번호는 표시된 글자로 옮기며, 일부 글자 효과와 머리말과 꼬리말의 간격도 단순화될 수 있습니다. 감지한 변경 사항은 결과 화면에 안내합니다.</p></details><details><summary>변환을 중단하는 문서도 있나요?</summary><p>수식, 일반 텍스트 상자, 장식이 있는 표 상자, 도형, 각주, 변경 추적은 지원하지 않습니다. 배경 그림, 그림 자르기와 효과, 여러 쪽 양식, 다단, 세로쓰기도 지원 범위에서 제외됩니다. 숨김 또는 조건부 내용, 암호화, 전자서명, 매크로, 외부 링크 그림도 처리하지 않습니다. 발견하면 일부 내용이 빠진 파일을 만들지 않고 이유를 표시합니다.</p></details><details><summary>파일 크기와 처리 한도는요?</summary><p>ODT 파일 1개당 최대 30 MB, 문단 5,000개, 표 셀 10,000개, 내장 그림 150개를 지원합니다. 압축을 푼 크기와 개별 그림 크기에도 한도가 있습니다. 처음 변환할 때 약 16 MB의 도구를 내려받으며 이후 문서는 브라우저 안에서 처리합니다. 기기 메모리가 부족하거나 변환이 5분을 넘으면 중단합니다.</p></details></div></section>
+<section id="faq" class="faq shell" aria-labelledby="faq-title"><div><p class="section-kicker">자주 묻는 질문</p><h2 id="faq-title">ODT를 한글로 바꾸려면</h2></div><div class="questions"><details><summary>ODT를 HWP로 변환할 수 있나요?</summary><p>네. ‘저장할 형식’에서 HWP를 선택하면 ODT 내용을 한글 문서로 옮겨 .hwp로 저장합니다. 저장한 HWP를 엔진에서 다시 열어 본문과 표, 그림, 주요 서식을 검사합니다. 내용 손실이나 서식 불일치가 감지되면 다운로드 대신 안내를 표시합니다.</p></details><details><summary>ODT를 HWPX로 변환하는 것과 다른가요?</summary><p>HWPX는 XML 기반의 한글 표준 문서 형식이고 HWP는 기존 바이너리 형식입니다. 제출처에서 .hwp를 요구하면 HWP를 선택하고, 별도 제한이 없다면 HWPX를 권장합니다. 확장자 이름만 바꾸는 방식이 아니라 문서 구조를 새로 작성합니다.</p></details><details><summary>공문서가 서버에 올라가나요?</summary><p>아니요. ODT 문서와 그 안의 그림, 파일 이름, 변환 결과는 서버로 전송하지 않습니다. 변환은 내 브라우저의 별도 작업 공간에서 실행되며 문서 처리용 네트워크 통신을 차단합니다. 사이트에 접속해 프로그램을 내려받는 과정은 필요합니다.</p></details><details><summary>변환 후 용량도 줄일 수 있나요?</summary><p>HWP 또는 HWPX로 저장한 결과는 <a href="/hwpzip-web/">한글 압축 도구</a>에서 이미지 용량을 줄일 수 있습니다. 변환과 압축 후에는 각각 결과를 확인해 주세요.</p></details></div></section>
+</main><footer class="footer shell">
+    <div class="footer-top"><a class="footer-brand" href="/hwpzip-web/">한글가볍게</a><nav class="footer-links" aria-label="운영 안내"><a class="privacy-policy-link" href="/hwpzip-web/privacy.html">개인정보 처리방침</a><a href="/hwpzip-web/terms.html">이용약관</a><a href="/hwpzip-web/file-handling.html">파일 처리 안내</a><a href="/hwpzip-web/contact.html">문의</a></nav></div>
+    <div class="footer-bottom"><p>운영자 정윤혁 <span aria-hidden="true">·</span> <a href="mailto:winf5531@gmail.com">winf5531@gmail.com</a></p><p>한컴과 무관한 독립 서비스입니다.</p></div>
+  </footer>
+</body></html>

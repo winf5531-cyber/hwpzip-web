@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head><meta name="referrer" content="no-referrer">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>한글 파일 용량 줄이기 | HWP·HWPX 압축 – 한글가볍게</title>
+  <meta name="description" content="한글 파일을 업로드 없이 내 브라우저에서 압축하세요. HWP·HWPX의 본문과 표 서식을 유지하고 표 채우기 사진까지 줄입니다. 첨부 제한에 맞춰 5MB 또는 15MB 미만을 목표로 선택할 수 있습니다.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="theme-color" content="#2454d6"><meta property="og:title" content="한글가볍게 — 한글 파일 용량 줄이기">
+  <meta property="og:description" content="표 안의 이미지까지, 문서는 그대로 더 가볍게. HWP·HWPX 이미지 압축 도구.">
+  <link rel="preload" href="/hwpzip-web/assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin><link rel="icon" href="/hwpzip-web/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/hwpzip-web/style.css">
+  <script src="/hwpzip-web/app.js?v=7b04ca8e1ec2" defer></script>
+<link rel="canonical" href="https://hwpzip.com/"><meta property="og:url" content="https://hwpzip.com/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "한글가볍게", "alternateName": "HWPZIP", "url": "https://hwpzip.com/"}</script>
+<meta name="robots" content="noindex,nofollow"></head>
+<body>
+  <a class="skip" href="#compress">본문으로 건너뛰기</a>
+  <header class="header shell"><a class="brand" href="/hwpzip-web/" aria-label="한글가볍게 홈"><img src="/hwpzip-web/favicon.svg" width="34" height="34" alt=""><span>한글<span class="brand-light">가볍게</span></span><small>BETA</small></a><nav aria-label="문서 도구"><a href="/hwpzip-web/" aria-current="page">한글 압축</a><a href="/hwpzip-web/odt-to-hangul/" >ODT → 한글</a></nav></header>
+  <main>
+    <section class="hero shell" id="compress" aria-labelledby="headline">
+      <p class="eyebrow">HWP·HWPX 압축</p>
+      <h1 id="headline">한글 파일 용량 줄이기</h1>
+      <p class="intro">본문과 표 서식을 유지하며 사진 용량을 줄이세요.<br class="mobile"> 표 채우기로 넣은 사진도 압축합니다.</p>
+      <div id="connection" class="notice" hidden role="status"></div>
+      <section class="document-privacy" aria-labelledby="privacy-title">
+        <div class="privacy-heading">
+          <span class="privacy-shield" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 8 3v5c0 5-8 10-8 10S4 16 4 11V6l8-3Zm-4 9 3 3 5-6"/></svg></span>
+          <div><p class="privacy-kicker">문서 보호 원칙</p><h2 id="privacy-title">파일을 서버에 업로드하지 않습니다.</h2></div>
+          <div class="privacy-assurance"><strong>공문서도 안심하고 사용하세요!</strong><a class="privacy-details" href="/hwpzip-web/file-handling.html" title="파일 처리 방식 자세히" aria-label="파일 처리 방식 자세히"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><circle class="info-dot" cx="12" cy="7.5" r=".8"/></svg></a></div>
+        </div>
+        <p class="privacy-caption" id="upload-privacy">내 브라우저에서 압축하고, 결과는 새 파일로 저장합니다.</p>
+      </section>
+      <div class="workspace">
+        <section class="upload-pane" aria-label="파일 압축">
+          <div id="dropzone" class="dropzone">
+            <div class="file-art" aria-hidden="true"><span class="document-mark"><span>HWP</span></span></div>
+            <h2>파일을 끌어 놓으세요</h2>
+            
+            <label class="button choose" for="file-input"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m-5 5 5-5 5 5M4 16v4h16v-4"/></svg>파일 선택</label>
+            <input id="file-input" class="visually-hidden" type="file" accept=".hwp,.hwpx" aria-describedby="format-note upload-privacy">
+            <p id="format-note" class="format-note">HWP 5.x 또는 HWPX 파일 1개, 최대 100 MB</p>
+          </div>
+          <div id="selected" class="selected" hidden><span class="file-badge">한</span><div class="file-detail"><strong id="filename"></strong><span id="filesize"></span></div><button id="remove" class="icon-button" aria-label="선택한 파일 제거">×</button></div>
+          <div id="progress" class="progress-area" hidden role="status" aria-live="polite"><div class="progress-heading"><span id="stage-title">내 기기에서 처리 중</span><span id="stage-value"></span></div><div id="progress-track" class="progress-track"><div id="progress-bar"></div></div><p id="stage-detail"></p><button id="cancel" class="text-button">작업 취소</button></div>
+          <div id="result" class="result" hidden aria-live="polite"><div class="complete-check" aria-hidden="true">✓</div><h2 id="result-title">파일이 더 가벼워졌어요</h2><div class="size-comparison"><span id="before-size"></span><span class="arrow">→</span><strong id="after-size"></strong></div><p id="savings"></p><p id="target-result" class="target-result"></p>
+            <div id="retry-offer" hidden><p>더 줄이면 이미지 속 작은 글씨가 흐려질 수 있어요.</p><button id="retry" class="button" type="button"></button></div>
+            <p id="retry-status" hidden role="status"></p>
+            <button id="download" class="button">압축 파일 다운로드 <span aria-hidden="true">↓</span></button><a id="first-download" class="text-button" hidden></a><p id="processing-time" class="result-note"></p><p id="result-note" class="result-note"></p><button id="another" class="text-button">다른 파일 압축하기</button></div>
+          <p id="error" class="error" hidden role="alert"></p>
+        </section>
+        <aside class="options" aria-label="압축 설정">
+          <div class="options-heading"><h2>압축 설정</h2></div>
+          <p id="layout-note" class="layout-note">세 방식 모두 문서 속 그림의 크기와 위치를 유지해요.</p>
+          <fieldset id="profile-options" aria-describedby="layout-note"><legend class="visually-hidden">압축 방식</legend>
+            <label class="option"><input type="radio" name="mode" value="attachment" checked><span class="option-copy"><strong>첨부용 압축 <small>추천</small></strong><span>용량이 큰 사진부터 압축해요. 문서가 선택한 용량보다 작아지면 멈춰요.</span></span></label>
+            <div id="target-control" class="target-control">
+              <label for="target">목표 용량</label>
+              <select id="target"><option value="5">5 MB 미만</option><option value="10">10 MB 미만</option><option value="15" selected>15 MB 미만</option><option value="20">20 MB 미만</option></select>
+            </div>
+            <label class="option"><input type="radio" name="mode" value="general"><span class="option-copy"><strong>일반 압축</strong><span>그림의 해상도는 그대로 유지해요. 비슷한 색을 한 가지로 묶는 등 색상 정보를 간소화해 용량을 줄여요.</span></span></label>
+            <label class="option"><input type="radio" name="mode" value="lossless"><span class="option-copy"><strong>무손실 압축</strong><span>모든 픽셀이 원본과 같을 때만 압축해요. 용량이 줄지 않을 수도 있어요.</span></span></label>
+          </fieldset>
+          <button id="compress-button" class="button compress-button" disabled>용량 줄이기 <span aria-hidden="true">→</span></button>
+        </aside>
+      </div>
+    </section>
+    <section id="how" class="how shell" aria-labelledby="how-title"><div><p class="section-kicker">사용 방법</p><h2 id="how-title">한글 파일을<br>압축하는 방법</h2><p><a class="guide-link" href="/hwpzip-web/guides/hwp-file-size/">5MB와 15MB 압축 예시 보기 →</a></p></div><ol><li><span>01</span><h3>파일 선택</h3><p>용량을 줄일 HWP 또는 HWPX 파일을<br>끌어 놓거나 선택하세요.</p></li><li><span>02</span><h3>압축 방식 선택</h3><p>세 가지 방식 중 하나를 고른 뒤<br>‘용량 줄이기’를 누르세요.</p></li><li><span>03</span><h3>다운로드</h3><p>결과 용량을 확인하고<br>새 한글 파일로 저장하세요.</p></li></ol></section>
+    <section id="faq" class="faq shell" aria-labelledby="faq-title"><div><p class="section-kicker">궁금한 점을 모았어요</p><h2 id="faq-title">사용 전에 확인해 주세요</h2></div><div class="questions"><details><summary>HWP 파일도 압축할 수 있나요?</summary><p>네. HWP 5.x 파일을 직접 압축하고 HWP로 저장합니다. HWPX로 변환하지 않으며 본문과 표, 글자 서식과 배치를 보존합니다. 내장 이미지의 저장 데이터와 필요한 이미지 형식 정보만 바꿉니다. HWP 97 문서, 암호 또는 DRM으로 보호한 문서, 배포용 문서와 전자서명 문서는 지원하지 않습니다. 중요한 문서는 저장 후 확인해 주세요.</p></details><details><summary>표 채우기로 넣은 이미지도 줄어드나요?</summary><p>네. 본문 그림뿐 아니라 표나 셀, 도형의 배경으로 넣은 이미지도 함께 검사하고 최적화합니다. 지원하지 않는 이미지 형식은 원래 상태로 보존합니다. 암호화되거나 전자서명된 문서는 처리하지 않습니다.</p></details><details><summary>5 MB나 15 MB 미만으로 어떻게 맞추나요?</summary><p>큰 사진부터 화질과 해상도를 단계별로 조정하고, 저장할 파일이 목표보다 작아지면 멈춥니다. 5 MB 미만은 5,000,000바이트보다 작은 파일을 뜻합니다. 줄일 수 있는 사진이 부족하면 결과 화면에 실제 용량과 목표 달성 여부를 표시해요. 결과 화면에서 부분 압축본을 받거나, 그림 화질을 더 낮춰 다시 시도할 수 있어요.</p></details><details><summary>이미지 속 글자가 흐려지지 않나요?</summary><p>문서의 본문 글자와 표 서식은 유지합니다. 큰 활동 사진은 해상도가 줄어들 수 있습니다. 흰 배경의 비율과 색상 변화로 사진을 구분합니다. 글자가 많은 스캔본이나 도표로 판단하면 해상도를 낮추지 않습니다. 사진으로 분류된 이미지 속 글자는 흐려질 수 있습니다. 중요한 문서는 다운로드 후 작은 글자를 확대해 확인해 주세요. 픽셀 변화가 없어야 한다면 ‘무손실 압축’를 선택하세요.</p></details><details><summary>파일이 서버에 올라가거나 보관되나요?</summary><p>아니요. 문서와 이미지는 이 브라우저 안에서 압축하며 서버로 전송하지 않습니다. 결과는 이 탭을 닫거나 새로고침하기 전에 저장해 주세요. 작업 중 탭을 닫으면 압축도 중단됩니다. 내 기기에 저장한 원본과 결과 파일은 그대로 남습니다.</p></details></div></section>
+  </main>
+  <footer class="footer shell">
+    <div class="footer-top"><a class="footer-brand" href="/hwpzip-web/">한글가볍게</a><nav class="footer-links" aria-label="운영 안내"><a class="privacy-policy-link" href="/hwpzip-web/privacy.html">개인정보 처리방침</a><a href="/hwpzip-web/terms.html">이용약관</a><a href="/hwpzip-web/file-handling.html">파일 처리 안내</a><a href="/hwpzip-web/contact.html">문의</a></nav></div>
+    <div class="footer-bottom"><p>운영자 정윤혁 <span aria-hidden="true">·</span> <a href="mailto:winf5531@gmail.com">winf5531@gmail.com</a></p><p>한컴과 무관한 독립 서비스입니다.</p></div>
+  </footer>
+</body>
+</html>

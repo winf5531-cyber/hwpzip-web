@@ -1,0 +1,3 @@
+HWPZIP · 한글가볍게
+Copyright © 2026 정윤혁. All rights reserved for original code.
+Third-party components retain their respective licenses. See assets/THIRD-PARTY-NOTICES.txt, assets/ODT-THIRD-PARTY-NOTICES.txt, assets/RHWP-DEPENDENCY-NOTICES.md and assets/fonts/Pretendard-LICENSE.txt.
