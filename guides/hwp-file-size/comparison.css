@@ -1,0 +1,26 @@
+.comparison-figures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 225px), 1fr));
+  align-items: start;
+  gap: 18px;
+  margin: 20px 0;
+}
+.comparison-figures figure {
+  min-width: 0;
+  margin: 0;
+}
+.comparison-figures img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.comparison-figures figcaption {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.compression-comparison th[scope="row"] {
+  background: transparent;
+}

@@ -3,9 +3,10 @@
 <head><meta name="referrer" content="no-referrer">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>한글 파일을 5MB·15MB 미만으로 줄이는 방법 | 한글가볍게</title>
-  <meta name="description" content="첨부 용량 제한에 맞춰 한글 사진을 줄이는 방법을 살펴보세요. 같은 42.23MB HWPX를 15MB와 5MB 목표로 압축한 결과, 표 채우기 사진과 스캔 글자를 확인하는 요령을 담았습니다.">
+  <title>한글 파일 용량 줄이는 방법 | 그림 압축 비교 - 한글가볍게</title>
+  <meta name="description" content="한글 파일 용량을 줄이는 방법을 알아보세요. 한글 2020 기본 그림 압축과 브라우저 압축을 비교하고, 표 배경 사진과 5MB·15MB 압축 예시를 확인하세요.">
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/guides/hwp-file-size/comparison.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://hwpzip.com/guides/hwp-file-size/"><meta property="og:url" content="https://hwpzip.com/guides/hwp-file-size/">
 </head>
@@ -16,8 +17,30 @@
   </header>
   <main class="privacy-page size-guide">
     <a class="back" href="/">← 한글 파일 용량 줄이기</a>
-    <h1>한글 파일을 5MB·15MB 미만으로 줄이는 방법</h1>
-    <p>사진을 붙인 보고서가 첨부 용량을 넘었다면 제출처의 제한부터 확인하세요. 15MB까지 받는 곳이라면 15MB 미만을 선택하세요. 한도가 5MB일 때는 같은 원본에서 5MB 미만으로 다시 시작하면 됩니다.</p>
+    <h1>한글 파일 용량 줄이는 방법</h1>
+    <p>사진이 많은 HWP나 HWPX 파일은 본문 그림부터 줄여 보세요. 표 칸을 사진으로 채운 문서라면 표 배경 사진도 확인할 필요가 있어요. 같은 HWPX에서 한글 2020의 기본 그림 압축과 한글가볍게를 비교했습니다.</p>
+    <h2>한글 기본 그림 압축과 한글가볍게 비교</h2>
+    <p>본문에 넣은 그림 한 장과 표 칸의 배경으로 넣은 그림 한 장이 있는 HWPX 예시를 만들었습니다. 두 그림 모두 2,300 × 1,560픽셀인 PNG였어요. 2026년 11월 21일에 같은 원본을 각각 복사해 다음과 같이 압축했습니다.</p>
+    <ul>
+      <li><strong>한글 2020</strong>에서 본문 그림을 선택하고 [그림] → [줄이기] → [용량 줄이기 설정]을 열었습니다. 저장할 때 모든 그림에 적용, 잘라낸 그림 영역 지우기, 삽입한 그림 크기에 맞춰 줄이기, 150dpi를 선택한 상태에서 HWPX로 저장했습니다. <a href="https://help.hancom.com/hoffice110/ko-KR/Hwp/toolbox/object_picture.htm">한컴 도움말의 그림 탭 안내</a></li>
+      <li><strong>한글가볍게</strong>에서 첨부용 압축으로 5MB 미만을 선택하고 첫 압축 결과를 저장했습니다.</li>
+    </ul>
+    <table class="compression-comparison">
+      <caption>같은 예시 문서의 실제 비교 (1MB = 1,000,000바이트)</caption>
+      <thead><tr><th scope="col">비교 항목</th><th scope="col">원본</th><th scope="col">한글 2020</th><th scope="col">한글가볍게</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">전체 파일</th><td>14.19MB</td><td>8.11MB</td><td>5.30MB</td></tr>
+        <tr><th scope="row">본문 그림</th><td>7.82MB</td><td>0.10MB</td><td>2.58MB</td></tr>
+        <tr><th scope="row">표 배경 그림</th><td>7.94MB</td><td>7.94MB</td><td>2.77MB</td></tr>
+      </tbody>
+    </table>
+    <p>그림 용량은 HWPX 안의 그림 파일을 꺼내 잰 값입니다. HWPX는 파일을 묶어서 다시 압축하므로 그림 용량의 합계와 문서 용량은 다를 수 있어요.</p>
+    <p>이 예시에서 한글 2020은 본문 그림을 472 × 157픽셀로 줄였고, 표 배경 그림 파일은 원본과 같았습니다. 한글가볍게는 두 그림의 픽셀 크기를 유지하면서 JPEG로 바꿔 줄였습니다. 첫 결과는 5.30MB여서 5MB 미만에는 도달하지 않았어요. 결과 화면에서 더 낮은 화질로 다시 시도하거나 부분 압축본을 받을 수 있습니다.</p>
+    <div class="comparison-figures">
+      <figure><img src="/assets/guides/hwp-file-size/hancom-2020-settings.jpg" width="496" height="446" alt="저장할 때 모든 그림에 적용과 150dpi를 선택한 한글 2020 설정 화면" loading="lazy" decoding="async"><figcaption>한글 2020의 그림 용량 줄이기 설정</figcaption></figure>
+      <figure><img src="/assets/guides/hwp-file-size/browser-result.png" width="799" height="490" alt="한글가볍게에서 14.19MB를 5.30MB로 줄인 결과와 더 압축하기 버튼" loading="lazy" decoding="async"><figcaption>한글가볍게의 첫 압축 결과</figcaption></figure>
+    </div>
+    <p>본문에 직접 넣은 그림이 대부분이면 한글의 기본 기능부터 써 보세요. 표의 배경에 넣은 사진이 큰 문서라면 그 사진까지 줄일 수 있는 압축 방식이 필요할 수 있어요. 결과는 원본 그림 종류, 저장 설정과 목표 용량에 따라 달라집니다.</p>
     <h2>사진이 많은 한글 파일 압축하기</h2>
     <ol>
       <li><a href="/#compress">한글 압축 도구</a>에서 원본 HWP 또는 HWPX 파일을 선택하세요.</li>
